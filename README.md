@@ -8,9 +8,9 @@
 ### Overview
 MEDKIT is a tool to help you take control of your preferences and configuration across all of your computers, including:
 
-* [Dotfile Management][dotfile-management]
-* [Run Command (rc) Script Management][rc-management]
-* [PATH Variable Management][path-management]
+* Dotfile Management
+* Run Command (rc) Script Management
+* PATH Variable Management
 
 ### Dotfile Management <a id="dotfile-management"></a>
 The trouble with dotfiles is that, unless you have just one account on one computer, you'll have lots of the little
@@ -104,13 +104,19 @@ architecture and put it wherever your distribution suggests.
 ### Windows WSL:
 We don't currently have a Windows Subsystem for Linux (WSL) binary, but it's coming very soon!
 
-## README-Oriented
+## README Driven Development
 MEDKIT is a work in progress and follows the [README Driven Development][readme-driven-development-url] model. As such,
 you'll see some things that are considered feature complete, some things that are a work in progress, and some things
 that simply haven't been started. We'll try to follow this convention in our docs:
 
-* [ ] Incomplete
-* [X] Complete (or at least _good enough for now_)
+* [ ] Not Started
+
+-or-
+
+* [X] Done (Stable/Not Stable)
+
+Each major feature should have a checkbox indicating the current status. If you don't see the feature referenced at all
+then, well... we're only dreaming about it at this point.
 
 ## Usage
 
@@ -130,7 +136,9 @@ This command will:
 As with most of MEDKIT's commands, you can change the behavior with command line flags. Be sure to type
 `$ medkit init --help` to see all your options.
 
-### [ ] Adding Dotfiles
+### Adding Dotfiles
+* [ ] Not Started
+
 Once you have a dotfiles directory, you can add existing dotfiles like this:
 ```sh
 $ medkit add dotfile -f ~/{dotfile-name} -d {setting-group-directory-name}
@@ -158,25 +166,32 @@ Note that there's a lot of ways to change this behavior. For example you could:
 
 To see all of the available options, just type `$ medkit add dotfile --help`.
 
-### [X] Viewing Dotfiles
+### Viewing Dotfiles
+* [X] Done
+
 You can view all of the dotfiles MEDKIT is managing like this:
 ```sh
 $ medkit show dotfiles
 ```
 
-### [X] Install Dotfiles
+### Install Dotfiles
+* [X] Done
+
 When you run `$ medkit install dotfiles` any file that starts with a hard stop (a.k.a., "dot" or "period") defined in
 your `default.env` or your `$HOST.env` files will be symlinked to your `$HOME` directory. Programs that use these files
 will see them as they always did. Now your files are source controlled and, if you choose, can be made available to your
 other computers.
 
-### [X] Updating Dotfiles
+### Updating Dotfiles
+* [ ] Not Started
+
 When you make a change to a dotfile, you'll probably want to make that change available on all your computers. The
 specifics of how to synchronize your MEDKIT repo will depend on the tools you choose. If you're using GitHub, for
 example, you'll need to make your changes, push them to GitHub, then pull them on all your other computers. No matter
 which process you prefer, your dotfiles will be automatically updated thanks to the symlinks.
 
 ### Configuration <a id="configuration"></a>
+When you make a change to a dotfile, you'll probably want to make that change available on all your computers. The
 MEDKIT has reasonable, opinionated defaults for all of its settings. However, if you need to change something you have a
 few options:
 
