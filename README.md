@@ -113,7 +113,11 @@ that simply haven't been started. We'll try to follow this convention in our doc
 
 -or-
 
-* [X] Done (Stable/Not Stable)
+* [X] In Progress
+
+-or-
+
+* [X] Done
 
 Each major feature should have a checkbox indicating the current status. If you don't see the feature referenced at all
 then, well... we're only dreaming about it at this point.
@@ -121,6 +125,8 @@ then, well... we're only dreaming about it at this point.
 ## Usage
 
 ### Initialization
+* [ ] Not Started (Use Tool-Less Process)
+
 If you already have a dotfiles directory just ensure that it follows the [conventions described above][conventions]. If
 you do not yet have your own dotfiles directory, let MEDKIT help you create one:
 ```sh
@@ -136,8 +142,11 @@ This command will:
 As with most of MEDKIT's commands, you can change the behavior with command line flags. Be sure to type
 `$ medkit init --help` to see all your options.
 
+#### Tool-Less Process
+The tool-less process for this command is very simple. Just perform the same actions that MEDKIT does.
+
 ### Adding Dotfiles
-* [ ] Not Started
+* [ ] Not Started (Use Tool-Less Process)
 
 Once you have a dotfiles directory, you can add existing dotfiles like this:
 ```sh
@@ -166,13 +175,21 @@ Note that there's a lot of ways to change this behavior. For example you could:
 
 To see all of the available options, just type `$ medkit add dotfile --help`.
 
+#### Tool-Less Process
+The tool-less process for this command is very simple. Just perform the same actions that MEDKIT does.
+
 ### Viewing Dotfiles
-* [X] Done
+* [X] In Progress
 
 You can view all of the dotfiles MEDKIT is managing like this:
 ```sh
 $ medkit show dotfiles
 ```
+
+#### Tool-Less Process
+The tool-less process for this command would be something like `$ find ~/dotfiles -name '.*'` (substitute `/dotfiles`
+for your actual dotfiles directory if necessary). Note that you may get some false positives for some things that MEDKIT
+is configured to ignore unless you mask them yourself.
 
 ### Install Dotfiles
 * [X] Done
@@ -181,14 +198,6 @@ When you run `$ medkit install dotfiles` any file that starts with a hard stop (
 your `default.env` or your `$HOST.env` files will be symlinked to your `$HOME` directory. Programs that use these files
 will see them as they always did. Now your files are source controlled and, if you choose, can be made available to your
 other computers.
-
-### Updating Dotfiles
-* [ ] Not Started
-
-When you make a change to a dotfile, you'll probably want to make that change available on all your computers. The
-specifics of how to synchronize your MEDKIT repo will depend on the tools you choose. If you're using GitHub, for
-example, you'll need to make your changes, push them to GitHub, then pull them on all your other computers. No matter
-which process you prefer, your dotfiles will be automatically updated thanks to the symlinks.
 
 ### Configuration <a id="configuration"></a>
 When you make a change to a dotfile, you'll probably want to make that change available on all your computers. The
@@ -212,6 +221,12 @@ must be prefixed with `MEDKIT_`. For example, you can set the location of your d
 
 #### Configuration File
 **TODO: Add info regarding the config file.**
+
+## Distributing Your Dotfiles
+When you make a change to a dotfile, you'll probably want to make that change available on all your computers. The
+specifics of how to synchronize your MEDKIT repo will depend on the tools you choose. If you're using GitHub, for
+example, you'll need to make your changes, push them to GitHub, then pull them on all your other computers. No matter
+which process you prefer, your dotfiles will be automatically updated thanks to the symlinks.
 
 ## How to Contribute
 Contributions are welcome! Check out [this link][contributing] on how you can help!
