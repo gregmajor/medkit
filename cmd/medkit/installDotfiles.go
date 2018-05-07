@@ -18,7 +18,7 @@ This command looks for any file with a .symlink extension in your dotfiles
 directory. When it finds a match, it will create a symbolic link from that
 file to your home directory.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		dotfilesDirectory := viper.GetString(DotFilesDirectory)
+		dotfilesDirectory := viper.GetString(DotfilesDirectory)
 		homeDirectory := viper.GetString(HomeDirectory)
 		backupExtension := viper.GetString(BackupExtension)
 

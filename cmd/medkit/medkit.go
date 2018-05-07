@@ -9,7 +9,7 @@ import (
 )
 
 const HomeDirectory = "HomeDirectory"
-const DotFilesDirectory = "DotfilesDirectory"
+const DotfilesDirectory = "DotfilesDirectory"
 const Bundles = "Bundles"
 const BackupExtension = "BackupExtension"
 
@@ -78,7 +78,7 @@ func initConfig() {
 func setDefaults() {
 	home := getHome()
 	viper.SetDefault(HomeDirectory, home)
-	viper.SetDefault(DotFilesDirectory, home+"/dotfiles")
+	viper.SetDefault(DotfilesDirectory, home+"/dotfiles")
 	viper.SetDefault(Bundles, "")
 	viper.SetDefault(BackupExtension, ".backup")
 }

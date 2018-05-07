@@ -24,7 +24,7 @@ func init() {
 
 // showConfig displays the program's configuration settings.
 func showConfig() {
-	configKeys := []string{HomeDirectory, Bundles, DotFilesDirectory, BackupExtension}
+	configKeys := []string{HomeDirectory, Bundles, DotfilesDirectory, BackupExtension}
 
 	fmt.Println("MEDKIT configuration settings:")
 	fmt.Println()

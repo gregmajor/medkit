@@ -14,7 +14,7 @@ var showDotfilesCmd = &cobra.Command{
 Display all of the dotfiles contained in your dotfiles directory. This command
 is recursive.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		dotfile.ShowDotfiles(viper.GetString(DotFilesDirectory))
+		dotfile.ShowDotfiles(viper.GetString(DotfilesDirectory))
 	},
 }
 

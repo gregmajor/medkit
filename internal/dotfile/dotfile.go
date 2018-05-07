@@ -192,7 +192,7 @@ func symlinkFilesInDirectory(path string, home string, backupExtension string) e
 
 					if fileLinksTo == match {
 						if ForceReinstall == false {
-							fmt.Printf("\n%s already installed", targetFile)
+							fmt.Printf("\n%s is already installed", targetFile)
 							continue
 						}
 					}
